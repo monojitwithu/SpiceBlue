@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Hom from "./styles/Main.scss"
 import Home from './coponents/home/Home';
+import {Provider} from "react-redux"
+import rStore from './Store'
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <Home/>,
+  <Provider store={rStore()}>
+    <Home/>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

@@ -1,0 +1,32 @@
+.devoloper-card{
+    
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    img{
+        height: 60px;
+        width: 60px;
+        margin: 8px;
+
+    }
+
+    .task-information{
+        
+    display: flex;
+    p{
+        margin: 0;
+        margin-top: 5px;
+    }
+
+
+    }
+    .edit-options{
+        svg{
+            margin: 21px;
+            cursor: pointer;
+        }
+    }
+
+}

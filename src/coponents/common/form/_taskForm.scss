@@ -7,8 +7,16 @@
     flex-direction: column;
     border-radius: 3px ;
     border: 1px solid lightgray;
+    .cards{
+        display: none;
+
+    }
+    .show-cards{
+        display: initial;
+    }
 
     .head{
+        width: 446px;
         
     display: flex;
     justify-content: space-between;
@@ -25,12 +33,19 @@
     font-size: 26px;
     
     border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    cursor: pointer;
       }
 
 
     }
-    .form{
+    .form{ 
+        animation: growDown 50ms ease-in-out forwards;
+        transform-origin: top center;
+        
+        
         form{
+            
             
     display: flex;
     flex-direction: column;
@@ -77,6 +92,7 @@
         
     display: flex;
     justify-content: space-around;
+
     p{
         width: 86px;
         background: #47BB7F;
@@ -86,10 +102,28 @@
         padding: 5px;
         border-radius: 5px;
         color: white;
+        cursor: pointer;
         
     }
 
 
     }
+ .hide-form{
+    
+    
+     display: none;
 
+ }
+
+ @keyframes growDown {
+	0% {
+	  transform: scaleY(0)
+	}
+	80% {
+	  transform: scaleY(1.1)
+	}
+	100% {
+	  transform: scaleY(1)
+	}
+  }
 

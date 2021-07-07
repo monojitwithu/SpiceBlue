@@ -1,8 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import TaskForm from "../common/form/TaskForm"
 
 
+
 const Home=()=>{
+    
+    const [form,setForm]=useState(true)
+
+    const formHandler=()=>{
+        form?setForm(false):setForm(true)
+    }
+    
 
     return(
         <div className="home">
@@ -12,7 +20,9 @@ const Home=()=>{
             </div>
             <div className="portal">
                 <div className="task-management">
-                    <TaskForm/>
+
+                    <TaskForm formHandler={formHandler} form={form}/>
+                    
                     
 
                 </div>
