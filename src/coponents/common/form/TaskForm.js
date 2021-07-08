@@ -61,7 +61,7 @@ const TaskForm=(props)=>{
                         </div>
                         <div className="time">
                         <label placeholder="Time">Time</label>
-                       <input placeholder="Time" type="select" onChange={inputHandler} name="time" />
+                       <input placeholder="Time" type="time" onChange={inputHandler} name="time" />
                        
                        
                        
