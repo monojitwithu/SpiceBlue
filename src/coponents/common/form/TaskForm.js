@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import DevoloperCard from '../devoloperCard/DevoloperCard'
 import {connect} from "react-redux"
+import DatePicker from 'react-datepicker'
+import "react-datepicker/dist/react-datepicker.css"
 
 
 const TaskForm=(props)=>{
@@ -52,7 +54,8 @@ const TaskForm=(props)=>{
                         <div className="date">
                         <label>Date</label>
 
-                        <input placeholder="date"/>
+                        
+                        <DatePicker selected={data.date} onChange={(date)=>setData({...data,date:date})}  dateFormat='dd/MM/yyyy'/>
 
                         </div>
                         <div className="time">
@@ -72,6 +75,7 @@ const TaskForm=(props)=>{
                 <div className="buttons">
                     <p>Cancel</p>
                     <p  onClick={()=>{
+                        props.formHandler()
                         
                         props.insertData(data)}}>Save</p> 
 
@@ -79,7 +83,7 @@ const TaskForm=(props)=>{
                 </div>
                  <div className={`cards ${props.form?"show-cards":""}`}>
 
-                     { props.rootreducer && props.rootreducer.map((item,index)=><DevoloperCard formHandler={props.formHandler} key={index} index={index} description={item.taskDescription} deleteHandler={deleteHandler} />)
+                     { props.rootreducer && props.rootreducer.map((item,index)=><DevoloperCard formHandler={props.formHandler} key={index} index={index} description={item.taskDescription} deleteHandler={deleteHandler} date={item.date} />)
 
                      }
                   
