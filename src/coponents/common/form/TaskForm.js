@@ -77,7 +77,7 @@ const TaskForm=(props)=>{
 
                 </form>
                 <div className="buttons">
-                    <p>Cancel</p>
+                    <p onClick={props.formHandler}>Cancel </p>
                     <p  onClick={()=>{
                         props.formHandler()
                         
