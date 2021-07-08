@@ -20,7 +20,7 @@ const DevoloperCard=({formHandler,description,deleteHandler,index,date})=>{
                 </div>
                 <div className="edit-options" >
                     <MdDelete onClick={()=>deleteHandler(index)}/>
-                  <BiEdit onClick={()=>formHandler(index)} />
+                    <BiEdit onClick={()=>formHandler(index)} />
 
                 </div>
 

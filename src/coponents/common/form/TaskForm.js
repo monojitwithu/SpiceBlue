@@ -39,7 +39,7 @@ const TaskForm=(props)=>{
     return(
         <div className="task-form">
             <div className="head">
-                <p>TASK 0 </p>
+                <p> TASK {props.rootreducer.length} </p>
                 <p className="plus-button" onClick={props.formHandler}>+</p>
             </div>
             
