@@ -53,14 +53,16 @@ const TaskForm=(props)=>{
                     <div className="date-time">
                         <div className="date">
                         <label>Date</label>
+                        <input type="date" onChange={inputHandler} name="date"/>
 
                         
-                        <DatePicker selected={data.date} onChange={(date)=>setData({...data,date:date})}  dateFormat='dd/MM/yyyy'/>
+                        {/* <DatePicker selected={data.date} onChange={(date)=>setData({...data,date:date})}  dateFormat='dd/MM/yyyy'/> */}
 
                         </div>
                         <div className="time">
                         <label placeholder="Time">Time</label>
-                       <input placeholder="Time"/>
+                       <input placeholder="Time" type="select" />
+                       
 
                         </div>
                     

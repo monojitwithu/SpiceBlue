@@ -6,10 +6,7 @@ import {MdDelete} from "react-icons/md"
 
 
 const DevoloperCard=({formHandler,description,deleteHandler,index,date})=>{
-    console.log(description)
-    console.log(date)
-    var dateto=date.toString()
-    console.log(dateto)
+   
     
     return(
         <div className="devoloper-card">
@@ -18,7 +15,7 @@ const DevoloperCard=({formHandler,description,deleteHandler,index,date})=>{
                 <img src={image}/>
                 <div className="date">
                     <p>{description}</p>
-                    <p>{dateto}</p>
+                    <p>{date}</p>
                 </div>
                 </div>
                 <div className="edit-options" >
