@@ -28,5 +28,12 @@
             cursor: pointer;
         }
     }
+    .edit-form{
+        display: none
+        ;
+    }
+    .visible{
+        display: initial;
+    }
 
 }

@@ -6,6 +6,7 @@ import "react-datepicker/dist/react-datepicker.css"
 
 
 const TaskForm=(props)=>{
+    
 
 
 
@@ -31,7 +32,7 @@ const TaskForm=(props)=>{
         props.deleteUser(id)
 
     }
-    console.log(props.rootreducer)
+    
     
 
 
@@ -112,7 +113,9 @@ const mapStateToProps=( rootreducer)=>{
       
       deleteUser:(id)=>dispatch({type:"delete",payload:id}),
       
-      insertData:(name)=> dispatch({type:"insertData",payload:name})  
+      insertData:(name)=> dispatch({type:"insertData",payload:name}) ,
+       
+      editData :(data,id)=>dispatch({type:"edit",payload:data,id:id})
       
   
     }

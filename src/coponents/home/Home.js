@@ -6,8 +6,10 @@ import TaskForm from "../common/form/TaskForm"
 const Home=()=>{
     
     const [form,setForm]=useState(true)
+    
 
     const formHandler=()=>{
+        
         form?setForm(false):setForm(true)
     }
     
@@ -21,7 +23,7 @@ const Home=()=>{
             <div className="portal">
                 <div className="task-management">
 
-                    <TaskForm formHandler={formHandler} form={form}/>
+                    <TaskForm formHandler={formHandler} form={form} />
                     
                     
 
