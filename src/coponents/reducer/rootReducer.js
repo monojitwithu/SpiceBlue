@@ -14,8 +14,9 @@ export default (state=defaultState,{type,payload,id})=>{
             return[...state,payload];
         case "delete": 
         let arr=[...state]
-        arr.splice(payload,1)
-        return arr;
+        arr.splice(payload,1)   //lower time Complexity
+        //   let newarr=state.filter((item,i)=>i!==id)
+          return arr;
         case "edit":
             let arr2=[...state]
     

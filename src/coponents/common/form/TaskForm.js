@@ -111,7 +111,7 @@ const mapStateToProps=( rootreducer)=>{
   const   mapDispatchProps=(dispatch)=>{
      return {
       
-      deleteUser:(id)=>dispatch({type:"delete",payload:id}),
+      deleteUser:(id)=>dispatch({type:"delete",id:id}),
       
       insertData:(name)=> dispatch({type:"insertData",payload:name}) ,
        
